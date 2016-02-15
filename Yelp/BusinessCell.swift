@@ -48,6 +48,14 @@ class BusinessCell: UITableViewCell {
         thumbimageView.layer.cornerRadius = 3
         thumbimageView.clipsToBounds = true
         
+        restaurantLabel.preferredMaxLayoutWidth = restaurantLabel.frame.size.width
+        
+    }
+    
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        
+        restaurantLabel.preferredMaxLayoutWidth = restaurantLabel.frame.size.width
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
